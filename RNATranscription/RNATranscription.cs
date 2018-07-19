@@ -18,10 +18,13 @@ namespace RNATranscriptionModule
             string msg = "";
             foreach (char c in nucleotide)
             {
-                if (c == 'G') msg += 'C';
-                else if (c == 'C') msg += 'G';
-                else if (c == 'T') msg += 'A';
-                else msg += 'U';
+              switch(c)
+                {
+                    case 'G': msg += 'C';break;
+                    case 'C': msg += 'G'; break;
+                    case 'T': msg += 'A'; break;
+                    case 'A': msg += 'U'; break;
+                }
 
             }
             return msg;
